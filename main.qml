@@ -10,6 +10,15 @@ ApplicationWindow {
     height: 480
     visible: true
 
+    property real contentScaleFactor: Screen.devicePixelRatio / 160
+    function dp(value) {
+        return value * contentScaleFactor * 2
+    }
+
+    function fontSize(value) {
+        return value * 2
+    }
+
     menuBar: MenuBar {
         Menu {
             title: qsTr("&File")
@@ -26,9 +35,10 @@ ApplicationWindow {
 
     Chat {
         id: chat
-        opacity: 0
+        opacity: 1
     }
 
+    /*
     MainForm {
         id: loginForm
         anchors.fill: parent
@@ -37,5 +47,6 @@ ApplicationWindow {
             chat.opacity = 1
         }
     }
+    */
 
 }

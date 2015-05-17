@@ -7,9 +7,18 @@ Component {
             width: contactBox.width
             height: 85
             color: "#faceb0"
+
+            Image {
+                anchors.verticalCenter: content.verticalCenter
+                id: avatarImage
+                source: "images/m.jpg"
+                width: 50
+                height: 50
+            }
+
             Text {
                 text: name+' '+surname
-                font.pointSize: 20
+                font.pointSize: vokno.fontSize(6)
                 anchors.centerIn: parent
             }
 
@@ -30,18 +39,14 @@ Component {
                 hoverEnabled: true
                 anchors.fill: parent
                 onClicked: {
-                    if (content.state != "ACTIVE")
-                        content.state = "ACTIVE"
-                    else
-                        content.state = "HOVER"
+
                 }
+
                 onEntered: {
-                    if (content.state != "ACTIVE")
-                        content.state = "HOVER"
+                    content.state = "HOVER"
                 }
                 onExited: {
-                    if (content.state != "ACTIVE")
-                        content.state = "NORMAL"
+                    content.state = "NORMAL"
                 }
             }
 
@@ -58,22 +63,6 @@ Component {
                     PropertyChanges {
                         target: content
                         color: "#4b3245"
-                    }
-
-                    PropertyChanges {
-
-                    }
-
-                },
-                State {
-                    name: "ACTIVE"
-                    PropertyChanges {
-                        target: content
-                        color: "#fdf5e6"
-                    }
-
-                    PropertyChanges {
-
                     }
 
                 }

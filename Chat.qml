@@ -10,7 +10,10 @@ Rectangle {
 
     Contacts {id: contactArea}
 
-    ChatArea {id: chatArea}
+    ChatArea {
+        id: chatArea
+        modelId: supermodel
+    }
 
 
 }
