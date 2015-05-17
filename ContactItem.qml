@@ -6,7 +6,7 @@ Component {
             id: content
             width: contactBox.width
             height: 85
-            color: "#4b3832"
+            color: "#faceb0"
             Text {
                 text: name+' '+surname
                 font.pointSize: 20
@@ -20,10 +20,7 @@ Component {
                 width: parent.width
                 height: 5
                 y: 100
-                gradient: Gradient {
-                        GradientStop { position: 0.0; color: "#4b3832" }
-                        GradientStop { position: 1.0; color: "#342723" }
-                    }
+                color: 'red'
             }
 
 

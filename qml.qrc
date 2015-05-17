@@ -7,5 +7,8 @@
         <file>Contacts.qml</file>
         <file>ContactList.qml</file>
         <file>ContactItem.qml</file>
+        <file>ChatArea.qml</file>
+        <file>ChatList.qml</file>
+        <file>ChatMessage.qml</file>
     </qresource>
 </RCC>
