@@ -12,5 +12,6 @@ Rectangle {
 
     ChatArea {id: chatArea}
 
+
 }
 

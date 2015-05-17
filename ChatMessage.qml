@@ -7,7 +7,7 @@ Component {
     Rectangle {
         id: chatMessageRectangle
         width: chatAreaBox.width
-        height: myText.paintedHeight + 50
+        height: myText.paintedHeight + 40
 
 
         Rectangle {
@@ -18,21 +18,23 @@ Component {
         Rectangle {
             id: textRectangle
             width: chatAreaBox.width
-            height: myText.paintedHeight + 20
-
+            height: myText.paintedHeight + 10
             anchors.verticalCenter: chatMessageRectangle.verticalCenter
             anchors.horizontalCenter: chatMessageRectangle.horizontalCenter
             color: "orange"
             radius: 12
 
+
             Text {
                 id: myText
-                width: chatAreaBox.width - 25
-                height: textRectangle.height
-
-                text: message + date
+                width: chatMessageRectangle.width - 30
+                anchors.verticalCenter: textRectangle.verticalCenter
+                anchors.horizontalCenter: textRectangle.horizontalCenter
+                text: message + " " + date
                 wrapMode: Text.Wrap
+                font.pixelSize: 20
             }
+
         }
 
         Rectangle {
