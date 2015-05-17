@@ -10,5 +10,6 @@
         <file>ChatArea.qml</file>
         <file>ChatList.qml</file>
         <file>ChatMessage.qml</file>
+        <file>images/m.jpg</file>
     </qresource>
 </RCC>
