@@ -61,8 +61,7 @@ Component {
                     }
 
                     PropertyChanges {
-                        target: divider.gradient.stops[0]
-                        color: "#4b3245"
+
                     }
 
                 },
@@ -74,8 +73,7 @@ Component {
                     }
 
                     PropertyChanges {
-                        target: divider.gradient.stops[0]
-                        color: "#fdf5e6"
+
                     }
 
                 }

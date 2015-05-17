@@ -8,9 +8,9 @@ Rectangle {
     height: vokno.height
     color: 'blue'
 
-    Contacts {}
+    Contacts {id: contactArea}
 
-
+    ChatArea {id: chatArea}
 
 }
 
