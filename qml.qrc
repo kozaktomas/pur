@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>LoginInput.qml</file>
+        <file>Chat.qml</file>
+        <file>Contacts.qml</file>
+        <file>ContactList.qml</file>
+        <file>ContactItem.qml</file>
+    </qresource>
+</RCC>
