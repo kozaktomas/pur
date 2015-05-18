@@ -46,7 +46,28 @@ Component {
             height: 5
         }
 
+
+        states: [
+            State {
+                name: "MY"
+                PropertyChanges {
+                    target: textRectangle
+                }
+            },
+            State {
+                name: "INCOMING"
+                when: (type == "incoming")
+                PropertyChanges {
+                    target: textRectangle
+                    color: "#faceb0"
+                }
+
+            }
+        ]
+
     }
+
+
 
 
 

@@ -3,6 +3,9 @@ import QtQuick 2.0
 Rectangle {
     id: chatMenu
 
+    property int fontSize: 25
+    property int marginSize: 15
+
     Text {
         id: document
         anchors.left: parent.left
@@ -11,29 +14,29 @@ Rectangle {
         text: "\uf15b"
         font.family: "FontAwesome"
         color: "gray"
-        font.pointSize: 25
+        font.pointSize: fontSize
     }
 
     Text {
         id: chat
         anchors.left: document.right
         anchors.bottom: document.bottom
-        anchors.leftMargin: 10
+        anchors.leftMargin: marginSize
         text: "\uf1d7"
         font.family: "FontAwesome"
         color: "red"
-        font.pointSize: 25
+        font.pointSize: fontSize
     }
 
     Text {
         id: videoCall
         anchors.left: chat.right
         anchors.bottom: chat.bottom
-        anchors.leftMargin: 10
+        anchors.leftMargin: marginSize
         text: "\uf03d"
         font.family: "FontAwesome"
         color: "gray"
-        font.pointSize: 25
+        font.pointSize: fontSize
     }
 
     /*

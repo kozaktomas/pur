@@ -58,11 +58,11 @@ Rectangle {
             id: chatInputText
             anchors.top: parent.top
             anchors.left: parent.left
-            width: parent.width * 0.8
+            width: parent.width * 0.9
             height: parent.height
-            color: "#EEE"
+            color: "#FFF"
             border.width: 6
-            border.color: "#DDD"
+            border.color: "#BBB"
 
             TextEdit{
                 anchors.left: parent.left
@@ -80,11 +80,9 @@ Rectangle {
 
         Rectangle {
             id: chatSubmit
-            width: parent.width * 0.2
+            width: parent.width * 0.1
             height: parent.height
             anchors.left: chatInputText.right
-            border.width: 6
-            border.color: "#CCC"
 
             Text {
                 id: arrow
@@ -105,7 +103,8 @@ Rectangle {
             anchors.fill: chatSubmit
             onClicked: {
                 chatList.append({
-                    message: "<strong>Tomas Kozak</strong> - " + textEdit.text,
+                    author: "Tomas Kozak",
+                    message: textEdit.text
                     /*date: new Date().toLocaleString(Qt.locale("cs"))*/
                 })
 

@@ -9,6 +9,13 @@ import QtQuick 2.0
         color: "#DDD"
 
 
+        Rectangle {
+            id: searchBox
+            anchors.top: contactBox.top
+            anchors.left: contactBox.left
+        }
+
+
         ContactItem{
             id: chatMessage
         }

@@ -6,29 +6,40 @@ Component {
             id: content
             width: contactBox.width
             height: 85
-            color: "#faceb0"
 
             Rectangle{
+                id: data
                 anchors.top: content.top
                 anchors.left: content.left
                 width: parent.width
                 height: 80
-                id: data
+                color: "#fff"
 
-
-                Image {
-                    id: avatarImage
+                Rectangle{
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.left: parent.left
                     anchors.leftMargin: 5
-                    source: "images/m.jpg"
                     width: 50
                     height: 50
+                    border.width: 2
+                    border.color: "#000"
+
+                    Image {
+                        id: avatarImage
+                        anchors.top: parent.top
+                        anchors.left: parent.left
+                        width: parent.width
+                        height: parent.height
+                        sourceSize.width: 42
+                        sourceSize.height: 50
+                        source: "images/m.jpg"
+                    }
                 }
 
                 Text {
-                    anchors.left: avatarImage.right
+                    anchors.left: avatarImage.parent.right
                     anchors.verticalCenter: parent.verticalCenter
+                    anchors.leftMargin: 5
                     text: name
                     font.pointSize: 14
                     wrapMode: Text.Wrap
@@ -58,10 +69,14 @@ Component {
                 }
 
                 onEntered: {
-                    content.state = "HOVER"
+                    if (active === 0){
+                        content.state = "HOVER"
+                    }
                 }
                 onExited: {
-                    content.state = "NORMAL"
+                    if (active === 0){
+                        content.state = "NORMAL"
+                    }
                 }
             }
 
@@ -69,15 +84,28 @@ Component {
             states: [
                 State {
                     name: "NORMAL"
+                    when: (active === 0)
                     PropertyChanges {
-                        target: content
+                        target: data
+                        color: "#fff"
                     }
                 },
+
+                State{
+                    name: "ACTIVE"
+                    when: (active === 1)
+                    PropertyChanges {
+                        target: data
+                        color: "#e0ffd6"
+                    }
+                },
+
                 State {
                     name: "HOVER"
+                    when: (active === 0)
                     PropertyChanges {
-                        target: content
-                        color: "#faceb0"
+                        target: data
+                        color: "#EEE"
                     }
 
                 }
