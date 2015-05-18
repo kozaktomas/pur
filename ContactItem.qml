@@ -1,4 +1,6 @@
 import QtQuick 2.0
+
+/* Jedna polozka v seznamu kontaktu */
 Component {
         id: chatMessage
 

@@ -1,5 +1,6 @@
 import QtQuick 2.0
 
+/* Obrazovka s prihlasenim */
 Rectangle {
     width: 180
     height: 28

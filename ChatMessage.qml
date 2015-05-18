@@ -1,5 +1,6 @@
 import QtQuick 2.0
 
+/* Jednotliva zprava v chatu */
 Component {
 
     id: chatMessage

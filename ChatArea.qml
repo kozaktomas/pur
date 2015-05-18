@@ -18,7 +18,7 @@ Rectangle {
     }
 
 
-
+    /* List View na chat - jednotlive zpravy */
     ListView {
         id: chatListView
         anchors.left: chatAreaBox.left
@@ -38,6 +38,7 @@ Rectangle {
     }
 
 
+    /* Ikonky na volani a posilani souboru */
     ChatMenu{
         id: chatMenu
         anchors.left: rowTextArea.left
@@ -46,6 +47,7 @@ Rectangle {
         height: chatAreaBox.height * 0.1
     }
 
+    /* Textarea pro odesilani novych zprav */
     Rectangle {
         id: rowTextArea
         anchors.left: chatMenu.left

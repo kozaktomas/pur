@@ -1,5 +1,6 @@
 import QtQuick 2.0
 
+/* 3 Ikonky nad odesilanim novych zprav */
 Rectangle {
     id: chatMenu
 
