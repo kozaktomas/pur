@@ -8,19 +8,34 @@ Component {
             height: 85
             color: "#faceb0"
 
-            Image {
-                anchors.verticalCenter: content.verticalCenter
-                id: avatarImage
-                source: "images/m.jpg"
-                width: 50
-                height: 50
+            Rectangle{
+                anchors.top: content.top
+                anchors.left: content.left
+                width: parent.width
+                height: 80
+                id: data
+
+
+                Image {
+                    id: avatarImage
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: parent.left
+                    anchors.leftMargin: 5
+                    source: "images/m.jpg"
+                    width: 50
+                    height: 50
+                }
+
+                Text {
+                    anchors.left: avatarImage.right
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: name
+                    font.pointSize: 14
+                    wrapMode: Text.Wrap
+                }
+
             }
 
-            Text {
-                text: name+' '+surname
-                font.pointSize: vokno.fontSize(6)
-                anchors.centerIn: parent
-            }
 
 
             Rectangle{
@@ -29,7 +44,7 @@ Component {
                 width: parent.width
                 height: 5
                 y: 100
-                color: 'red'
+                color: '#CCC'
             }
 
 
@@ -62,7 +77,7 @@ Component {
                     name: "HOVER"
                     PropertyChanges {
                         target: content
-                        color: "#4b3245"
+                        color: "#faceb0"
                     }
 
                 }

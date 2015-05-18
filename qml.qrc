@@ -11,9 +11,6 @@
         <file>ChatList.qml</file>
         <file>ChatMessage.qml</file>
         <file>images/m.jpg</file>
-        <file>images/documents.png</file>
-        <file>images/chat.png</file>
-        <file>images/video_call.png</file>
         <file>ChatMenu.qml</file>
         <file>fonts/fontawesome-webfont.ttf</file>
     </qresource>

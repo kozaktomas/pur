@@ -6,7 +6,7 @@ import QtQuick 2.0
         anchors.left: parent.left
         width: chatVokno.width * 0.33
         height: chatVokno.height
-        color: "green"
+        color: "#DDD"
 
 
         ContactItem{

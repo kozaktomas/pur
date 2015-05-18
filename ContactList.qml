@@ -2,68 +2,43 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
+        name: "Tommy Hubbard"
     }
     ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Wilbert Hernandez"
     }
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
+        name: "Kellie Jennings"
     }
     ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Christina Little"
     }
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
+        name: "Allen Ortiz"
     }
     ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Lyle Spencer"
     }
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
+        name: "Josephine Romero"
     }
     ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Arlene Nguyen"
     }
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
+        name: "Rosemari Doyle"
     }
     ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Andy Powers"
     }
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
+        name: "Melvin Zimmerman"
     }
     ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Latoya Hodges"
     }
     ListElement {
-        name: "Martin"
-        surname: "Chodur"
-    }
-    ListElement {
-        name: "Tomas"
-        surname: "Kozak"
-    }
-    ListElement {
-        name: "Martin"
-        surname: "Chodur"
-    }
-    ListElement {
-        name: "Tomas"
-        surname: "Kozak"
+        name: "Terry Franklin"
     }
 }
 

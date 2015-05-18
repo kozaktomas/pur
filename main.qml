@@ -3,48 +3,25 @@ import QtQuick.Controls 1.3
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.2
 
+/* Hlavni okno aplikace */
 ApplicationWindow {
     id: vokno
     title: qsTr("PUR chat")
-    width: 640
-    height: 480
+    width: 1024
+    height: 800
     visible: true
+    color: "#DDD"
 
     // Load the "FontAwesome" font for the monochrome icons.
     FontLoader {
         source: "fonts/fontawesome-webfont.ttf"
     }
 
-
-    property real contentScaleFactor: Screen.devicePixelRatio / 160
-    function dp(value) {
-        return value * contentScaleFactor * 2
-    }
-
-
-    function fontSize(value) {
-        return value * 2
-    }
-
-    menuBar: MenuBar {
-        Menu {
-            title: qsTr("&File")
-            MenuItem {
-                text: qsTr("&Open")
-                onTriggered: messageDialog.show(qsTr("Open action triggered"));
-            }
-            MenuItem {
-                text: qsTr("E&xit")
-                onTriggered: Qt.quit();
-            }
-        }
-    }
-
     Chat {
         id: chat
-        opacity: 1
     }
 
+    /* Prihlaseni do aplikace */
     /*
     MainForm {
         id: loginForm

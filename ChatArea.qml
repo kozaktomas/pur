@@ -3,9 +3,13 @@ import QtQuick 2.0
 Rectangle {
 
     id: chatAreaBox
+    anchors.top: contactArea.top
     anchors.left: contactArea.right
+    anchors.right: chatVokno.right
     anchors.leftMargin: 20
-    width: chatVokno.width * 0.66
+    anchors.rightMargin: 20
+
+    width: chatVokno.width * 0.65
     height: chatVokno.height
 
 
@@ -19,12 +23,15 @@ Rectangle {
         id: chatListView
         anchors.left: chatAreaBox.left
         anchors.top: chatAreaBox.top
+        anchors.bottom: chatMenu.top
         width: chatAreaBox.width * 0.8
-        height: chatAreaBox.height * 0.6
+        height: chatAreaBox.height - chatMenu.height - rowTextArea.height - 10
+
+
         model: ChatList {
             id: chatList
         }
-        spacing: 25
+        spacing: 10
         delegate: chatMessage
         cacheBuffer: 50
         Component.onCompleted: positionViewAtEnd()
@@ -33,32 +40,41 @@ Rectangle {
 
     ChatMenu{
         id: chatMenu
-        anchors.left: chatListView.left
-        anchors.top: chatListView.bottom
+        anchors.left: rowTextArea.left
+        anchors.bottom: rowTextArea.top
         width: chatAreaBox.width
-        height: chatAreaBox.height * 0.2
+        height: chatAreaBox.height * 0.1
     }
 
     Rectangle {
         id: rowTextArea
         anchors.left: chatMenu.left
-        anchors.top: chatMenu.bottom
+        anchors.bottom: chatAreaBox.bottom
         width: chatAreaBox.width * 1
-        height: chatAreaBox.height * 0.3
+        height: Math.min(chatAreaBox.height * 0.3, 100)
 
 
         Rectangle {
             id: chatInputText
+            anchors.top: parent.top
             anchors.left: parent.left
             width: parent.width * 0.8
             height: parent.height
-            color: "#FF0"
+            color: "#EEE"
+            border.width: 6
+            border.color: "#DDD"
 
             TextEdit{
-                anchors.verticalCenter: chatInputText.verticalCenter
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: parent.top
+                anchors.fill: parent
+                anchors.leftMargin: 20
+                anchors.rightMargin: 20
+                anchors.topMargin: 10
                 id: textEdit
-                anchors.fill: chatInputText
-                font.pixelSize: 50
+                font.pixelSize: 20
+                wrapMode: TextEdit.WordWrap
             }
         }
 
@@ -67,11 +83,17 @@ Rectangle {
             width: parent.width * 0.2
             height: parent.height
             anchors.left: chatInputText.right
-            color: "black"
+            border.width: 6
+            border.color: "#CCC"
 
             Text {
-                anchors.verticalCenter: chatSubmit.verticalCenter
-                anchors.horizontalCenter: chatSubmit.horizontalCenter
+                id: arrow
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.topMargin: (parent.height / 2) - (arrow.paintedHeight / 2)
+                anchors.leftMargin: (parent.width / 2) - (arrow.paintedWidth / 2)
                 text: "\uf1d8"
                 font.family: "FontAwesome"
                 color: "blue"

@@ -2,7 +2,6 @@ import QtQuick 2.0
 
 Rectangle {
     id: chatMenu
-    border.width: 1
 
     Text {
         id: document
@@ -12,7 +11,7 @@ Rectangle {
         text: "\uf15b"
         font.family: "FontAwesome"
         color: "gray"
-        font.pointSize: 22
+        font.pointSize: 25
     }
 
     Text {
@@ -22,8 +21,8 @@ Rectangle {
         anchors.leftMargin: 10
         text: "\uf1d7"
         font.family: "FontAwesome"
-        color: "gray"
-        font.pointSize: 22
+        color: "red"
+        font.pointSize: 25
     }
 
     Text {
@@ -34,7 +33,7 @@ Rectangle {
         text: "\uf03d"
         font.family: "FontAwesome"
         color: "gray"
-        font.pointSize: 22
+        font.pointSize: 25
     }
 
     /*
