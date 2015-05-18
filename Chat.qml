@@ -12,7 +12,6 @@ Rectangle {
 
     ChatArea {
         id: chatArea
-        modelId: supermodel
     }
 
 

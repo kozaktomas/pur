@@ -8,7 +8,6 @@ Rectangle {
     width: chatVokno.width * 0.66
     height: chatVokno.height
 
-    property string modelId: chatList
 
     ChatMessage {
         id: chatMessage
@@ -18,10 +17,12 @@ Rectangle {
 
     ListView {
         id: chatListView
+        anchors.left: chatAreaBox.left
+        anchors.top: chatAreaBox.top
         width: chatAreaBox.width * 0.8
-        height: chatAreaBox.height * 0.8
+        height: chatAreaBox.height * 0.6
         model: ChatList {
-            id: modelId
+            id: chatList
         }
         spacing: 25
         delegate: chatMessage
@@ -30,12 +31,20 @@ Rectangle {
     }
 
 
+    ChatMenu{
+        id: chatMenu
+        anchors.left: chatListView.left
+        anchors.top: chatListView.bottom
+        width: chatAreaBox.width
+        height: chatAreaBox.height * 0.2
+    }
 
     Rectangle {
         id: rowTextArea
-        anchors.verticalCenter: chatAreaBox.bottom
-        width: chatAreaBox.width
-        height: chatAreaBox.height * 0.2
+        anchors.left: chatMenu.left
+        anchors.top: chatMenu.bottom
+        width: chatAreaBox.width * 1
+        height: chatAreaBox.height * 0.3
 
 
         Rectangle {
@@ -61,18 +70,20 @@ Rectangle {
             color: "black"
 
             Text {
-                anchors.fill: parent
-                text: "SEND"
-                color: "white"
-                font.pointSize: 14
+                anchors.verticalCenter: chatSubmit.verticalCenter
+                anchors.horizontalCenter: chatSubmit.horizontalCenter
+                text: "\uf1d8"
+                font.family: "FontAwesome"
+                color: "blue"
+                font.pointSize: 22
             }
         }
 
         MouseArea {
             anchors.fill: chatSubmit
             onClicked: {
-                modelId.append({
-                    message: "<strong>David Prochazka</strong> - " + textEdit.text,
+                chatList.append({
+                    message: "<strong>Tomas Kozak</strong> - " + textEdit.text,
                     /*date: new Date().toLocaleString(Qt.locale("cs"))*/
                 })
 

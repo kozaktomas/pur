@@ -10,10 +10,17 @@ ApplicationWindow {
     height: 480
     visible: true
 
+    // Load the "FontAwesome" font for the monochrome icons.
+    FontLoader {
+        source: "fonts/fontawesome-webfont.ttf"
+    }
+
+
     property real contentScaleFactor: Screen.devicePixelRatio / 160
     function dp(value) {
         return value * contentScaleFactor * 2
     }
+
 
     function fontSize(value) {
         return value * 2
